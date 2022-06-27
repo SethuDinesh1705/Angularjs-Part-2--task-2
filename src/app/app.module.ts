@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { UsersService } from './users.service';
+import { ActiveModule } from './active/active.module';
+import { HomeComponent } from './home/home.component';
+import { DeletedModule } from './deleted/deleted.module';
+import { ManageModule } from './manage/manage.module';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
+    ActiveModule,
+    DeletedModule,
+    ManageModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UsersService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

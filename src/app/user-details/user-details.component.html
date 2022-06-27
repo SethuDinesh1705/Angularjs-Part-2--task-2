@@ -1,0 +1,34 @@
+<div class="container" id="containmat" *ngFor="let user of usersdetail">
+
+    <div *ngIf="user.id==name">
+        <h3 id="text">{{user.id}}</h3>
+        <div class="content" *ngIf="user.isDeleted==true">
+            <p class="active">Active</p>
+        </div>
+        <div class="contentdelete" *ngIf="user.isDeleted==false">
+            <p class="delete">Deleted</p>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Login Id</td>
+                    <td>{{user.id}}</td>
+                </tr>
+                <tr>
+                    <td>First Name </td>
+                    <td>{{user.firstName}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{user.value}}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{user.age}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
